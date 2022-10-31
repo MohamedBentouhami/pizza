@@ -20,7 +20,6 @@
     background-color: f7cac9;
 
     grid-area: footer;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -31,15 +30,13 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 0.34fr;
-    grid-template-rows: 0.1fr 1fr 0.2fr;
+    grid-template-rows: 10em 1fr 0.2fr;
     grid-template-areas:
     "header header header"
     "main main menu"
     "footer footer footer"
     ;
 
-    gap: 10px;
-    padding: 10px;
 
 }
 
