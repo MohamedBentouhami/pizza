@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
+    <title>Pizza</title>
     <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}">
 
 </head>
@@ -13,7 +13,7 @@
 <body>
     <div class="grid-container">
         <div class="item1">
-            <h1>Pizza à Gogo - Acceuil</h1>
+            @yield('title')
         </div>
         <div class="item2">
             <main>
@@ -23,13 +23,13 @@
         <div class="item3">
             <ul>
 
-                <li><a href="/home">Acceuil</a>
+                <li><a href="{{ route('home') }}">Accueil</a>
                 </li>
                 <li>
-                    <a href="/nos-pizzas">Nos pizzas</a>
+                    <a href="{{ route('pizza') }}">Nos pizzas</a>
                 </li>
                 <li>
-                    <a href="/commander">Commander</a>
+                    <a href="{{ route('order') }}">Commander</a>
                 </li>
 
 

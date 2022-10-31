@@ -19,4 +19,17 @@ class Pizza
 
         return DB::select('SELECT * FROM `garniture` join contient on cGar = gId join pizza on cPizza = pId');
     }
+    public static function getIngredients($id)
+    {
+
+        return DB::select('SELECT gId,gNom, gPrix,cPizza,cGar FROM `garniture`
+        join contient on cGar = gId
+        join pizza on cPizza = pId
+        where pId = ?', [$id]);
+    }
+    public static function getGarnitureD()
+    {
+
+        return DB::select('SELECT gNom,gId FROM `garniture` join contient on cGar = gId join pizza on cPizza = pId group by gNom,gId');
+    }
 }

@@ -1,4 +1,7 @@
 @extends('canevas')
+@section('title')
+<h1>Pizza à Gogo - Nos Pizzas</h1>
+@endsection
 @section('content')
 <ul>
     @foreach($pizzas as $pizza)
